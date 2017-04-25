@@ -1,0 +1,2 @@
+# squaddy
+Team management app
