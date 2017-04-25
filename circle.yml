@@ -1,0 +1,6 @@
+deployment:
+    release:
+        tag: /release-.*/
+        owner: circleci
+        commands:
+            - cap production test
