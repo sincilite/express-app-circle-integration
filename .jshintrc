@@ -13,6 +13,9 @@
         "document": false,
         "XMLHttpRequest": false,
         "console": false,
-        "module": false
-    }
+        "module": false,
+        "require": false,
+        "process": false
+    },
+    "esversion": 6
 }
