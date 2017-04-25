@@ -1,0 +1,19 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "First Last <first.last@example.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-handlebars": "^3.0.0",
+    "joi": "^10.4.1",
+    "moment": "^2.18.1",
+    "mysql": "^2.13.0",
+    "node-mysql": "^0.4.2",
+    "vue": "^2.2.6"
+  }
+}

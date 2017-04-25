@@ -1,0 +1,14 @@
+# create a docker-compose.yml file
+version: "2"
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "8080:8080"
+    external_links:
+      - mysql57
+    network_mode: bridge
+    env_file:
+      - app-variables.env
