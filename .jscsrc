@@ -1,0 +1,12 @@
+{
+    "preset": "jquery",
+    "requireCurlyBraces": ["if", "for", "while"],
+    "disallowMultipleLineBreaks": false,
+    "requireSpacesInsideParentheses": false,
+    "requireSpacesInsideBrackets": false,
+    "requireNewlineBeforeSingleStatementsInIf": true,
+    "requireCamelCaseOrUpperCaseIdentifiers": {"ignoreProperties": true},
+    "maximumLineLength": 150,
+    "requireCapitalizedComments": false,
+    "validateIndentation": 4
+}

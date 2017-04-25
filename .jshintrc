@@ -1,0 +1,18 @@
+{
+    "strict": true, //true: A directive for setting JSHint options.
+    "boss": true, // true: Tolerate assignments where comparisons would be expected
+    "curly": true, // true: Require {} for every new block or scope
+    "eqeqeq": true, // true: Require triple equals (===) for comparison
+    "eqnull": true, // true: Tolerate use of `== null`
+    "noarg": true, // true: Prohibit use of `arguments.caller` and `arguments.callee`
+    "undef": true, // true: Require all non-global variables to be declared (prevents global leaks)
+    "unused": true, // true: Warns about variabled being defined but never used
+    "globals": { // White list of global variables that are not formally defined in the source code
+        "$": false,
+        "window": false,
+        "document": false,
+        "XMLHttpRequest": false,
+        "console": false,
+        "module": false
+    }
+}
