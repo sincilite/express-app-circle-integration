@@ -1,3 +1,5 @@
+set :stage, :staging
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -20,6 +22,14 @@
 # role :app, %w{deploy@example.com}, my_property: :my_value
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
+role :app, %w{ec2-user@52.49.103.66}
+role :web, %w{ec2-user@52.49.103.66}
+
+set :ssh_options, {
+  forward_agent: true,
+  auth_methods: ["publickey"],
+  keys: [File.join(ENV["HOME"], ".ssh", "zaxity-development.pem")]
+}
 
 
 

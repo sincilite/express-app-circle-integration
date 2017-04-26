@@ -7,20 +7,20 @@ const moment = require("moment");
 const config = require("./config/config.js")
 
 // Constants
-const PORT = 8080;
+const PORT = 80;
 
 // App
 const app = express();
 
 
-config.db.connect(function(err) {
+/*config.db.connect(function(err) {
     if (err) {
         console.log("Error connecting to database\n" + err);
         return
     } else {
         console.log("Connection successful");
     }
-});
+});*/
 
 app.engine(".hbs", expresshbs({
     defaultLayout: 'main',
@@ -37,7 +37,7 @@ app.get('/', (request, response) => {
     });
 });
 
-app.get('/users', (request, response, next) => {
+/*app.get('/users', (request, response, next) => {
     config.db.query("SELECT * FROM users", function (err, rows) {
         if (err) {
             return next(err);
@@ -46,7 +46,7 @@ app.get('/users', (request, response, next) => {
             users: rows
         });
     });
-});
+});*/
 
 app.use((err, request, response, next) => {
     console.log(err);
