@@ -31,3 +31,6 @@ set :deploy_to, "/data/someapplication.com"
 
 # Default value for keep_releases is 5
 set :keep_releases, 5
+
+after :updated, :install_node_modules
+after :publishing, :node_start
