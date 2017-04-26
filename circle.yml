@@ -12,6 +12,5 @@ deployment:
             - cap production test
     master:
         branch: master
-        owner: zaxity
         commands:
-            - cap production test
+            - bundle exec cap staging test
