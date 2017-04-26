@@ -1,6 +1,9 @@
 machine:
   ruby:
     version: 2.3.3
+dependencies:
+    pre:
+      - gem install bundler -v 1.14.6
 deployment:
     release:
         tag: /release-.*/
