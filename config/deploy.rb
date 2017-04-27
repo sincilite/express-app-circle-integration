@@ -33,6 +33,6 @@ set :deploy_to, "/data/someapplication.com"
 set :keep_releases, 5
 
 namespace :deploy do
-    #after :published, :install_node_modules
-    #after :install_node_modules, :node_start
+    after :published, :install_node_modules
+    after :install_node_modules, :node_start
 end
