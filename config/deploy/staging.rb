@@ -28,10 +28,13 @@ role :web, %w{ec2-user@52.49.103.66}
 set :ssh_options, {
   forward_agent: true,
   auth_methods: ["publickey"],
-  #keys: [File.join(ENV["HOME"], ".ssh", "zaxity-development.pem")]
 }
 
-
+if !defined?(ENV["CI"]) || ENV["CI"].nil?
+    set :ssh_options, fetch(:ssh_options).merge({
+        key: [File.join(ENV["HOME"], ".ssh", "zaxity-development.pem")]
+    })
+end
 
 # Configuration
 # =============

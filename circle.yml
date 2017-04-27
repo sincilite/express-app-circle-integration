@@ -1,6 +1,8 @@
 machine:
   ruby:
     version: 2.3.3
+  environment:
+    ci: true
 dependencies:
     pre:
       - gem install bundler -v 1.14.6
