@@ -28,4 +28,6 @@ desc "Get CicleCI Env"
         print "GETTING ENV\n"
         print ENV["CIRCLE_BRANCH"]
         print ENV["CIRCLE_TAG"]
+        puts ENV["CI"]
+        print "END ENV\n"
     end
