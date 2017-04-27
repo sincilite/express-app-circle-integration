@@ -7,11 +7,18 @@ desc "Install node modules"
     end
 end
 
+desc "Stop node application"
+    task :node_stop do
+        on roles(:app) do
+            execute :forever, 'stopall'
+    end
+end
+
 desc "Start node"
     task :node_start do
         on roles(:app) do
             within release_path do
-            execute :node, 'server.js'
+            execute :forever, 'start', 'server.js'
         end
     end
 end

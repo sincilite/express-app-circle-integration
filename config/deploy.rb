@@ -34,5 +34,6 @@ set :keep_releases, 5
 
 namespace :deploy do
     after :published, :install_node_modules
-    after :install_node_modules, :node_start
+    after :install_node_modules, :node_stop
+    after :node_stop, :node_start
 end
