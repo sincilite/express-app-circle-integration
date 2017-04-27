@@ -26,6 +26,6 @@ desc "Start node"
 desc "Get CicleCI Env"
     task :get_env do
         print "GETTING ENV\n"
-        print fetch(ENV["CIRCLE_BRANCH"])
-        print fetch(ENV["CIRCLE_TAG"])
+        print ENV["CIRCLE_BRANCH"]
+        print ENV["CIRCLE_TAG"]
     end
