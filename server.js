@@ -7,7 +7,7 @@ const moment = require("moment");
 const config = require("./config/config.js")
 
 // Constants
-const PORT = 80;
+const PORT = 8080;
 
 // App
 const app = express();
@@ -33,7 +33,7 @@ app.set("views", path.join(__dirname, "views"));
 
 app.get('/', (request, response) => {
     response.render("home", {
-        name: "Michael"
+        name: "Michael vR"
     });
 });
 
