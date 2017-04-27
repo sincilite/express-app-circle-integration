@@ -13,4 +13,4 @@ deployment:
     master:
         branch: master
         commands:
-            - bundle exec cap staging test
+            - bundle exec cap staging deploy
