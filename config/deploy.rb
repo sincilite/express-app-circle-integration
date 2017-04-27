@@ -33,7 +33,7 @@ set :deploy_to, "/data/someapplication.com"
 set :keep_releases, 5
 
 namespace :deploy do
-    print fetch(ENV["CIRCLE_TAG"])
+    before :install_node_modules, :get_env
     after :published, :install_node_modules
     after :install_node_modules, :node_stop
     after :node_stop, :node_start
