@@ -11,7 +11,7 @@ deployment:
         tag: /release-.*/
         owner: circleci
         commands:
-            - cap production test
+            - bundle exec cap production deploy
     master:
         branch: master
         commands:

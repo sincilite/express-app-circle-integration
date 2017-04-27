@@ -5,7 +5,7 @@ set :application, "someapplication.com"
 set :repo_url, "git@github.com:sincilite/squaddy.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+#ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/data/someapplication.com"
@@ -33,6 +33,7 @@ set :deploy_to, "/data/someapplication.com"
 set :keep_releases, 5
 
 namespace :deploy do
+    print fetch(ENV["CIRCLE_TAG"])
     after :published, :install_node_modules
     after :install_node_modules, :node_stop
     after :node_stop, :node_start

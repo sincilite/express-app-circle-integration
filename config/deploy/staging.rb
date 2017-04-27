@@ -32,7 +32,7 @@ set :ssh_options, {
 
 if !defined?(ENV["CI"]) || ENV["CI"].nil?
     set :ssh_options, fetch(:ssh_options).merge({
-        key: [File.join(ENV["HOME"], ".ssh", "zaxity-development.pem")]
+        keys: [File.join(ENV["HOME"], ".ssh", "zaxity-development.pem")]
     })
 end
 
