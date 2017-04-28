@@ -22,12 +22,3 @@ desc "Start node"
             end
         end
     end
-
-desc "Get CicleCI Env"
-    task :get_env do
-        print "GETTING ENV\n"
-        print ENV["CIRCLE_BRANCH"]
-        print ENV["CIRCLE_TAG"]
-        puts ENV["CI"]
-        print "END ENV\n"
-    end
