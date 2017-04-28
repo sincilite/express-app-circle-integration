@@ -8,7 +8,6 @@ dependencies:
 deployment:
     release:
         tag: /release-.*/
-        owner: circleci
         commands:
             - bundle exec cap production deploy
     master:
