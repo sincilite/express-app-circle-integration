@@ -4,6 +4,7 @@ machine:
 dependencies:
     pre:
       - gem install bundler -v 1.14.6
+      - git fetch --tags
 deployment:
     release:
         tag: /release-.*/
