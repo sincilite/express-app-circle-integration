@@ -14,3 +14,5 @@ deployment:
         branch: master
         commands:
             - sh ./whitelist_ip.sh
+            - bundle exec cap staging deploy
+            - sh ./remove_ip.sh
