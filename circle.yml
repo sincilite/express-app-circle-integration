@@ -10,16 +10,16 @@ dependencies:
 deployment:
     tags:
         tag: /v(\d).(\d).(\d)
-            commands:
-                - sh ./whitelist_ip.sh
-                - bundle exec cap production deploy
-                - sh ./remove_ip.sh
+        commands:
+            - sh ./whitelist_ip.sh
+            - bundle exec cap production deploy
+            - sh ./remove_ip.sh
     release:
         branch: /release-.*/
-            commands:
-                - sh ./whitelist_ip.sh
-                - bundle exec cap staging deploy
-                - sh ./remove_ip.sh
+        commands:
+            - sh ./whitelist_ip.sh
+            - bundle exec cap staging deploy
+            - sh ./remove_ip.sh
     #master:
     #    branch: master
     #    commands:
