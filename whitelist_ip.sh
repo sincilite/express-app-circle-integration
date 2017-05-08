@@ -1,3 +1,4 @@
+#! /bin/bash
 public_ip_address=$(wget -qO- http://checkip.amazonaws.com)
 echo "this computers public ip address is $public_ip_address"
 aws ec2 help

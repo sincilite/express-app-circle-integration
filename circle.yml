@@ -13,4 +13,4 @@ deployment:
     master:
         branch: master
         commands:
-            - ./whitelist_ip.sh
+            - sh ./whitelist_ip.sh
