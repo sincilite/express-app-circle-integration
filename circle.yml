@@ -9,7 +9,7 @@ dependencies:
         - git fetch --tags
 deployment:
     tags:
-        tag: /v(\d).(\d).(\d)
+        tag: /(v[0-9]\.[0-9]\.[0-9])/
         commands:
             - sh ./whitelist_ip.sh
             - bundle exec cap production deploy
