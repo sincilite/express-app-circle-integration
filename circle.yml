@@ -1,20 +1,28 @@
 machine:
-  ruby:
-    version: 2.3.3
-  environment:
-    security_group_id: sg-974520ee
+    ruby:
+        version: 2.3.3
+    environment:
+        security_group_id: sg-974520ee
 dependencies:
     pre:
-      - gem install bundler -v 1.14.6
-      - git fetch --tags
+        - gem install bundler -v 1.14.6
+        - git fetch --tags
 deployment:
-    release:
-        tag: /release-.*/
+    tags:
+        tag: /v(\d).(\d).(\d)
         commands:
+            - sh ./whitelist_ip.sh
             - bundle exec cap production deploy
-    master:
-        branch: master
+            - sh ./remove_ip.sh
+    release:
+        branch: /release-.*/
         commands:
             - sh ./whitelist_ip.sh
             - bundle exec cap staging deploy
             - sh ./remove_ip.sh
+    #master:
+    #    branch: master
+    #    commands:
+    #        - sh ./whitelist_ip.sh
+    #        - bundle exec cap staging deploy
+    #        - sh ./remove_ip.sh
