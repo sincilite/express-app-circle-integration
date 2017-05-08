@@ -1,6 +1,8 @@
 machine:
   ruby:
     version: 2.3.3
+  environment:
+    security_group_id: sg-974520ee
 dependencies:
     pre:
       - gem install bundler -v 1.14.6
